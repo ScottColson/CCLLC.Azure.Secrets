@@ -10,26 +10,20 @@ namespace CCLLC.Azure.Secrets
 
     public abstract class AzureRestRequest<T> : SerializedRESTRequest<T> where T : class, ISerializedRESTResponse
     {
-        protected AzureRestRequest(IDataSerializer serializer, IAPIEndpoint endpoint, string accessToken = null) 
-            : base(serializer, endpoint, accessToken)
-        {
-            if (!this.ApiEndpoint.QueryParameters.ContainsKey("api-version"))
-            {
-                this.ApiEndpoint.AddQuery("api-version", "7.0");
-            }
+        protected AzureRestRequest(IJSONContractSerializer serializer, AuthToken token, IAPIEndpoint endpoint) 
+            : base(serializer, endpoint, token?.access_token)        
+        {           
         }
 
         protected virtual string AuthenticationToken
         {
             get
             {
-                var clearText = this.AccessToken;
-                var encodedText = Convert.ToBase64String(Encoding.UTF8.GetBytes(clearText));
-                return string.Format("Bearer {0}",encodedText);
+                return string.Format("Bearer {0}", this.AccessToken);
             }
         }
 
-        public override T Execute(IHttpWebRequest webRequest)
+        public override T Execute(IWebRequest webRequest)
         {
             webRequest.Headers.Add("Authorization", this.AuthenticationToken);
             webRequest.Headers.Add("Cache-Control", "no-cache");
@@ -39,7 +33,7 @@ namespace CCLLC.Azure.Secrets
         }
 
        
-        protected virtual T InternalExecute(IDataSerializer serializer, IHttpWebRequest webRequest)
+        protected virtual T InternalExecute(IDataSerializer serializer, IWebRequest webRequest)
         {
             var webResponse = webRequest.Get();
             return serializer.Deserialize<T>(webResponse.Content);

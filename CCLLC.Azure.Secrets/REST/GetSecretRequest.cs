@@ -6,7 +6,7 @@
     public class GetSecretRequest : AzureRestRequest<SecretBundle>
     {
         public GetSecretRequest(IJSONContractSerializer serializer, AuthToken token, string secretId) 
-            : base(serializer, new APIEndpoint(secretId), token?.access_token)
+            : base(serializer, token, new APIEndpoint(secretId).AddQuery("api-version","7.0"))
         {            
         }
 

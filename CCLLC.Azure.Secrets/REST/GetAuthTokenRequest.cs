@@ -20,7 +20,7 @@ namespace CCLLC.Azure.Secrets
             this.ClientSecret = clientSecret;           
         }
 
-        public override AuthToken Execute(IHttpWebRequest webRequest)
+        public override AuthToken Execute(IWebRequest webRequest)
         {
             var data = generateFormData();
             SetRequestHeaders(webRequest);
