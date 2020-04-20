@@ -1,5 +1,4 @@
-﻿
-namespace CCLLC.Azure.Secrets
+﻿namespace CCLLC.Azure.Secrets
 {
     using CCLLC.Core.Net;
     using CCLLC.Core.Serialization;

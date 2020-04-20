@@ -1,10 +1,6 @@
-﻿using System;
-
-
-namespace CCLLC.Azure.Secrets
+﻿namespace CCLLC.Azure.Secrets
 {
     using CCLLC.Core.Net;
-    using CCLLC.Core.RESTClient;
     using CCLLC.Core.Serialization;
 
     public class GetSecretRequest : AzureRestRequest<SecretBundle>

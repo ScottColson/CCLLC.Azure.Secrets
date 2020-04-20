@@ -5,7 +5,7 @@ using CCLLC.Core.RESTClient;
 namespace CCLLC.Azure.Secrets
 {
     [DataContract]
-    public class AuthToken : IRESTResponse, IAzureRestResponse
+    public class AuthToken : ISerializedRESTResponse
     {
         [DataMember]
         public string token_type { get; set; }
