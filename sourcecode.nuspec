@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata minClientVersion="3.3.0">
+    <id>CCLLC.Azure.Secrets.Sources</id>
+    <version>1.0.0-beta</version>
+    <description>Provides access to Azure Key Vault Secrets using a Dictionary interface compatible with CCLLC.Core.ISettingProvider.</description>
+    <authors>Colson Code, LLC</authors>
+    <owners>Colson Code, LLC</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/ScottColson/CCLLCCodeLibraries</projectUrl>
+    <tags></tags>
+  </metadata>
+  <files>   
+    <file src="CCLLC.Azure.Secrets\**\*.cs" target="content/App_Packages/CCLLC.Azure.Secrets.1.0.0-beta/" />
+  </files>
+</package>
