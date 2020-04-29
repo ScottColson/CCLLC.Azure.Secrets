@@ -12,6 +12,6 @@
     <tags></tags>
   </metadata>
   <files>   
-    <file src="CCLLC.Azure.Secrets\**\*.cs" target="content/App_Packages/CCLLC.Azure.Secrets.1.0.0-beta/" />
+    <file src="CCLLC.Azure.Secrets\**\*.cs" target="content/App_Packages/CCLLC.Azure.Secrets.$id$/" />
   </files>
 </package>
