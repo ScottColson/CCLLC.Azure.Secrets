@@ -9,9 +9,9 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/ScottColson/CCLLCCodeLibraries</projectUrl>
-    <tags></tags>
-    <files>
-      <file src="**\Release\**\CCLLC.Azure.Secrets.dll" target="lib" />      
-    </files>
+    <tags></tags>    
   </metadata>
+  <files>
+    <file src="**\Release\**\CCLLC.Azure.Secrets.dll" target="lib" />
+  </files>
 </package>
