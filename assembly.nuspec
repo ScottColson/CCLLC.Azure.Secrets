@@ -8,10 +8,21 @@
     <owners>Colson Code, LLC</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <license type="expression">MIT</license>
-    <projectUrl>https://github.com/ScottColson/CCLLCCodeLibraries</projectUrl>
-    <tags></tags>    
+    <projectUrl>https://github.com/ScottColson/CCLLC.Azure.Secrets</projectUrl>
+    <tags></tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.2">
+        <dependency id="CCLLC.Core.ProcessModel" version="1.1.3" />
+        <dependency id="CCLLC.Core.RestClient" version="1.1.0" />
+      </group>
+      <group targetFramework=".NETFramework4.6.2">
+        <dependency id="CCLLC.Core.ProcessModel" version="1.1.3" />
+        <dependency id="CCLLC.Core.RestClient" version="1.1.0" />
+      </group>
+    </dependencies>
   </metadata>
   <files>
-    <file src="**\Release\**\CCLLC.Azure.Secrets.dll" target="lib" />
+    <file src="CCLLC.Azure.Secrets.Lib\bin\Release\**\CCLLC.Azure.Secrets.dll" target="lib" />
+    <file src="CCLLC.Azure.Secrets.Lib\bin\Release\**\CCLLC.Azure.Secrets.pdb" target="lib" />
   </files>
 </package>
