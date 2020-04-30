@@ -11,7 +11,4 @@
     <projectUrl>https://github.com/ScottColson/CCLLCCodeLibraries</projectUrl>
     <tags></tags>
   </metadata>
-  <files>   
-    <file src="CCLLC.Azure.Secrets\**\*.cs" target="content/App_Packages/CCLLC.Azure.Secrets.$version$/" />
-  </files>
 </package>
