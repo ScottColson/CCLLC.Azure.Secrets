@@ -10,5 +10,8 @@
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/ScottColson/CCLLCCodeLibraries</projectUrl>
     <tags></tags>
+    <files>
+      <file src="bin\Release\**\CCLLC.Azure.Secrets.dll" target="lib" />      
+    </files>
   </metadata>
 </package>
